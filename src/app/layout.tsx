@@ -32,7 +32,7 @@ export default function RootLayout({
           {children}
         </div>
         <footer className="bg-gray-100 text-center p-4">
-          <p>@Create by HB Lee</p>
+          <p>@Created by HB Lee</p>
         </footer>
       </body>
     </html>

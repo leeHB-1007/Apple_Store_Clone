@@ -5,7 +5,12 @@ export default function Nav() {
     <div className="fixed top-0 left-0 right-0 bg-white shadow z-10">
       <div className="max-w-screen-xl mx-auto flex justify-around p-4">
         <div className="cursor-default flex flex-row items-center space-x-8 select-none">
-          <Link href="/">🍎</Link>
+          <Link href="/">
+            {" "}
+           
+              <span className="text-black text-xl"></span>
+
+          </Link>
           <Link href="/">Store</Link>
           <Link href="/">Mac</Link>
           <Link href="/">iPad</Link>

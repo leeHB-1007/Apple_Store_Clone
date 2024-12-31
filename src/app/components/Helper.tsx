@@ -9,13 +9,13 @@ export default function Helper() {
 
         <div>
           <p className="text-sm text-gray-700 font-medium">
-            Need shopping help?
+            도움이 필요하신가요?
           </p>
           <a
             href="#"
             className="text-blue-600 text-sm font-semibold hover:underline"
           >
-            Ask a Specialist
+            전문가에게 물어보기
           </a>
         </div>
       </div>
@@ -27,13 +27,13 @@ export default function Helper() {
         </div>
         <div>
           <p className="text-sm text-gray-700 font-medium">
-            Visit an Apple Store
+            애플 스토어 방문하기
           </p>
           <a
             href="#"
             className="text-blue-600 text-sm font-semibold hover:underline"
           >
-            Find one near you ›
+            가까운 매장 위치 찾기
           </a>
         </div>
       </div>
