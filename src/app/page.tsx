@@ -4,19 +4,20 @@ import Helper from "./components/Helper";
 import FirstCarousel from "./components/FirstCarousel";
 import SecCarousel from "./components/SecCarousel";
 import StoreSpan2 from "./components/StoreSpan2";
+
 export default function Home() {
   return (
-    <div>
-      <div className="flex items-center justify-around">
+    <div className="pl-48">
+      <div className="flex items-center ">
         <StoreSpan />
-        <Helper />
+        <div className="-ml-[-400px]"> {/* Helper 위치 조정 */}
+          <Helper />
+        </div>
       </div>
       <div>
         <FirstCarousel />
       </div>
-      <div className="ml-48">
-        <StoreSpan2 />
-      </div>
+      <StoreSpan2 />
       <SecCarousel />
     </div>
   );
