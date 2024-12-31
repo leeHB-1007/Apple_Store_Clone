@@ -25,13 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <header>
-            <Nav/>
-        </header>
-      <body>{children}</body>
-      <footer>
-        <p>Footer</p>
-      </footer>
+      <body>
+        <Nav />
+        {/* Main content area */}
+        <div className="pt-[60px] bg-gray-50">
+          {children}
+        </div>
+        <footer className="bg-gray-100 text-center p-4">
+          <p>@Create by HB Lee</p>
+        </footer>
+      </body>
     </html>
   );
 }

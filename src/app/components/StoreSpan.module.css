@@ -1,0 +1,11 @@
+.custom-width {
+    width: 625.82px; 
+}
+
+.max-w-md {
+    max-width: 640px; 
+}
+
+.min-w-625 {
+    min-width: 625px; /* 최소 너비를 625px로 설정 */
+}
