@@ -4,8 +4,7 @@ import Helper from "./components/Helper";
 
 export default function Home() {
   return (
-    <div className="flex ">
-        <h1>Main 페이지</h1>
+    <div className="flex items-center justify-around">
         <StoreSpan />
         <Helper/>
     </div>
