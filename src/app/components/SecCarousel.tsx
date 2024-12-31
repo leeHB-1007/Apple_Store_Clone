@@ -29,13 +29,13 @@ export default function SecCarousel() {
           className="flex transition-transform duration-500 ease-in-out"
           style={{
             boxSizing: "content-box", // content-box로 변경하여 패딩을 제외한 순수 너비를 기준으로 계산
-            transform: `translateX(calc(-${currentIndex * (100 / visibleItems)}% - 1rem))`, // 2rem 만큼 왼쪽 패딩을 넘어가도록 조정
+            transform: `translateX(calc(-${currentIndex * (100 / visibleItems)}% - 1.5rem))`, // 2rem 만큼 왼쪽 패딩을 넘어가도록 조정
           }}
         >
           {Array.from({ length: totalItems }).map((_, index) => (
             <div
               key={index}
-              className="flex-shrink-0 p-2 m-3 "
+              className="flex-shrink-0 p-2 m-3 rounded"
               style={{
                 boxSizing: "border-box",
                 width: "400px", // 고정 너비 설정
