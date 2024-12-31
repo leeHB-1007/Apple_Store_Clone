@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function SecCarousel() {
   const totalItems = 11; // 아이템의 총 개수
-  const visibleItems = 5; // 화면에 보여줄 아이템 개수
+  const visibleItems = 7; // 화면에 보여줄 아이템 개수
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -24,21 +24,25 @@ export default function SecCarousel() {
   return (
     <div className="w-full max-w-full relative">
       {/* Carousel Content */}
-      <div className="flex overflow-hidden">
+      <div className="relative flex">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${(currentIndex / visibleItems) * 100}%)`,
+            boxSizing: "content-box", // content-box로 변경하여 패딩을 제외한 순수 너비를 기준으로 계산
+            transform: `translateX(calc(-${currentIndex * (100 / visibleItems)}% - 1rem))`, // 2rem 만큼 왼쪽 패딩을 넘어가도록 조정
           }}
         >
           {Array.from({ length: totalItems }).map((_, index) => (
             <div
               key={index}
-              className="flex-shrink-0 p-2"
-
+              className="flex-shrink-0 p-2 m-3 "
+              style={{
+                boxSizing: "border-box",
+                width: "400px", // 고정 너비 설정
+              }}
             >
               {/* 카드 스타일 적용 */}
-              <Card
+              <Card className="rounded"
                 style={{
                   width: "400px",
                   height: "500px",

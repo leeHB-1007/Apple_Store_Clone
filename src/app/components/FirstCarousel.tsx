@@ -24,8 +24,9 @@ export default function CarouselSize() {
     "Apple Card",
     "Apple News+",
   ];
+  
   const handleNext = () => {
-    if (currentIndex <= 2) {
+    if (currentIndex <= 3) {
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -39,11 +40,11 @@ export default function CarouselSize() {
   return (
     <div className="w-full max-w-full relative">
       {/* Carousel Content */}
-      <div className="flex overflow-hidden">
+      <div className="relative flex">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${(currentIndex / visibleItems) * 100}%)`,
+            transform: `translateX(calc(-${currentIndex * (100 / visibleItems)}% - 1rem))`, // 1rem 만큼 왼쪽 패딩을 넘어가도록 조정
           }}
         >
           {Array.from({ length: totalItems }).map((_, index) => (
